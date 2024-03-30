@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}each item{% endblock %}
+
+{% block content %}
+    
+        
+            
+           <div >
+            <img src="{% static 'two.jpg' %}">
+            <div >
+            <h2><strong>{{details.name}}</strong></h2>
+             <p>R{{details.price}}</p>
+             <p>{{details.size}}</p>
+             <p>{{details.description}}</p>
+            </div>
+            </div>
+
+    
+{% endblock %}

@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}The Items{% endblock %}
+
+{% block content %}
+    {% if pack %}
+        {% for item in pack %}
+            
+           <div class="item">
+    
+            <img src="{% static 'two.jpg' %}">
+            <div class="details" 
+            <h2><strong>{{item.name}}</strong></h2>
+             <p>R{{item.price}}</p>
+             <p>{{item.size}}</p>
+
+        
+            <button><a href="{% url 'cli:Detail' item.id %}">Click Details</a></button>
+
+            </div>
+        
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
